@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <style>
+            *, *:before, *:after {
+              -moz-box-sizing: border-box;
+              -webkit-box-sizing: border-box;
+              box-sizing: border-box;
+            }
+
+            body {
+              font-family: 'Nunito', sans-serif;
+              color: #384047;
+            }
+
+            form {
+              width: 100%;
+              height: 650px;
+              margin: 0px auto;
+              padding: 10px 20px;
+              background: #f4f7f8;              
+            }
+
+            input[type="text"],
+            input[type="password"],
+            input[type="date"],
+            input[type="datetime"],
+            input[type="email"],
+            input[type="number"],
+            input[type="search"],
+            input[type="tel"],
+            input[type="time"],
+            input[type="url"],
+            textarea,
+            select {
+              background: rgba(255,255,255,0.1);
+              border: none;
+              font-size: 16px;
+              height: auto;
+              margin: 0;
+              outline: 0;
+              padding: 10px;
+              background-color: #e8eeef;
+              color: #8a97a0;
+              box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+              margin-bottom: 5px;
+            }
+            
+            input[type="file"]{
+                margin-bottom: 10px;
+            }
+            
+            .marginbot{
+                margin-bottom: 10px;
+            }
+            
+            
+            .wfull{
+                width: 100%;
+            }
+            
+            .whalf{
+                width: 49%;
+                margin-right: 10px;
+            }
+            
+            .sameline{
+                float: left;
+            }
+            
+            h1{                
+              margin: 0 0 8px 0;
+              text-align: center;
+            }
+
+            input[type="radio"],
+            input[type="checkbox"] {
+              margin: 0 2px 4px 0;
+            }
+
+            select {
+              padding: 6px;
+              height: 32px;
+              border-radius: 2px;
+            }
+
+            input[type="submit"] {
+              /* padding: 19px 39px 18px 39px; */
+              padding: 10px;
+              color: #FFF;
+              background-color: #4bc970;
+              font-size: 18px;
+              text-align: center;
+              font-style: normal;
+              border-radius: 5px;
+              width: 100%;
+              border: 1px solid #3ac162;
+              border-width: 1px 1px 3px;
+              box-shadow: 0 -1px 0 rgba(255,255,255,0.1) inset;
+              margin-bottom: 10px;
+              
+              cursor: pointer;
+            }
+
+            fieldset {
+              margin-bottom: 30px;
+              border: none;
+            }
+
+            legend {
+              font-size: 1em;
+              margin-bottom: 2px;
+            }
+
+            label {
+              display: block;
+              margin-bottom: 5px;
+            }
+
+            label.light {
+              font-weight: 300;
+              display: inline;
+            }
+
+            .number {
+              background-color: #5fcf80;
+              color: #fff;
+              height: 30px;
+              width: 30px;
+              display: inline-block;
+              font-size: 0.8em;
+              margin-right: 4px;
+              line-height: 30px;
+              text-align: center;
+              text-shadow: 0 1px 0 rgba(255,255,255,0.2);
+              border-radius: 100%;
+            }
+            
+            .sign_in_up-btn{
+              color: #FFF;
+              font-size: 14px;
+              text-align: center;
+              font-style: normal;
+              border: 0;
+              box-shadow: 0 -1px 0 rgba(255,255,255,0.1) inset;
+              float:left;
+              height: 100%;
+              text-align: center;
+              width: 50%;
+            }
+
+            .tab{
+                background: #f4f7f8;              
+                width: 100%;
+                height: 40px;
+                
+            }
+            
+            #sign-div{
+                margin: auto;
+                width: 70%;
+                height: 40px;
+            }
+
+            
+
+            @media screen and (min-width: 480px) {
+
+              form {
+                max-width: 480px;
+              }
+
+            }
+            
+            
+            /* Style the tab */
+            div.tab {
+                overflow: hidden;
+                border: 0;
+            }
+            
+            div.tabcontent{
+              width: 100%;
+              height: 100%;
+              margin: 0px auto;
+              background: #f4f7f8;              
+            }
+
+            /* Style the buttons inside the tab */
+            div.tab button {
+                cursor: pointer;
+                transition: 0.3s;
+                background-color: #204d74;
+            }
+
+
+            /* Create an active/current tablink class */
+            div.tab button.active {
+                background-color: #3ac162;
+                border: 0;
+                color: #FFF;
+            }
+            
+            /* Style the tab content */
+            .tabcontent {
+                display:block;
+                padding: 6px 12px;
+                border: 0;
+            }
+            
+        </style>
+    </head>
+    <body>      
+        
+        <div class="tab">
+            <div id="sign-div">
+                            <button id="signup-button" onclick="openCity(this.id,event, 'signup')" style="background: #3ac162;" class="tablinks sign_in_up-btn" >ลงทะเบียนฟรี !</button>
+                            <button id="signin-button" onclick="openCity(this.id,event, 'signin')" class="tablinks sign_in_up-btn" >เข้าสู่ระบบ!</button>
+            </div>
+        </div>
+        
+        
+        <div id="signup" class="tabcontent">
+            <form action="index.html" method="post">
+                <h1>ลงทะเบียนฟรี !</h1>
+                <fieldset>
+                  <legend><span class="number">!</span>สร้างรายได้จากการเป็นจุดรับพัสดุ</legend>
+                  <div class="sameline marginbot">
+                    <input type="text" class="whalf" id="name" name="user_name" placeholder="ชื่อ">
+                    <input type="text" class="whalf" id="sur_name" name="sur_name" placeholder="นามสกุล">
+                  </div>
+
+                  <input type="tel" class="wfull" id="tel" name="tel" placeholder="เบอร์โทรศัพท์">
+
+                  <input type="email" class="wfull" id="mail" name="user_email" placeholder="อีเมล:">
+
+                  <input type="password" class="wfull" id="password" name="user_password" placeholder="รหัสผ่าน:">
+
+
+
+                  <textarea name="address" class="wfull" placeholder="ที่อยู่"></textarea>  
+
+
+                  <label>รูปถ่ายที่หน้าบ้าน / หน้าร้าน ของท่าน</label>
+                  <input type="file" name="file">
+
+                  <label>บริการเสริมของคุณ:</label>
+                  <input type="radio" id="under_13" value="under_13" name="user_age"><label for="under_13" class="light">มีรถไปส่งที่บ้าน </label><br>
+                  </fieldset>
+                  <input type="submit" value="ลงทะเบียน">
+            </form>  
+        </div>
+        
+        
+        <div id="signin" class="tabcontent">
+            <form action="index.html" method="post">
+                <h1>ลงชื่อเข้าใช้</h1>
+                <fieldset><legend><span class="number">!</span>เข้าสู่ระบบเพื่อจัดการพัสดุ</legend>
+                  <input type="email" class="wfull" id="mail" name="user_email" placeholder="อีเมล:">
+                  <input type="password" class="wfull" id="password" name="user_password" placeholder="รหัสผ่าน:">
+                  <input type="submit" value="เข้าสู่ระบบ">                  
+                  <div style="width: 100%;margin-top: 20px;text-align: center;"><a style="color: #1b6d85; text-decoration: none;" href="#">ลืมรหัสผ่าน ?</a></div>
+                </fieldset>
+            </form>
+        </div>
+        
+        
+        <script>
+            function openCity(id,evt, cityName) {
+                // Declare all variables
+                var i, tabcontent, tablinks;
+
+                // Get all elements with class="tabcontent" and hide them
+                tabcontent = document.getElementsByClassName("tabcontent");               
+                       
+                document.getElementById("signup-button").style.background='#204d74';                
+                document.getElementById("signin-button").style.background='#204d74';
+                
+                                
+                document.getElementById(id).style.background='#3ac162';
+                
+                for (i = 0; i < tabcontent.length; i++) {
+                    tabcontent[i].style.display = "none";
+                }
+
+                // Get all elements with class="tablinks" and remove the class "active"
+                tablinks = document.getElementsByClassName("tablinks");
+                for (i = 0; i < tablinks.length; i++) {
+                    tablinks[i].className = tablinks[i].className.replace(" active", "");
+                }
+
+                // Show the current tab, and add an "active" class to the button that opened the tab
+                document.getElementById(cityName).style.display = "block";
+                evt.currentTarget.className += " active";
+            }
+    </script>
+        
+        
+    </body>
+</html>
